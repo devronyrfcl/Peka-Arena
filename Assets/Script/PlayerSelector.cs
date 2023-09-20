@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSelector : MonoBehaviour
 {
-    public static PlayerSelector Instance { get; private set; }
 
     public List<GameObject> playerPrefabs;
     public List<GameObject> dummyObjects;
@@ -22,19 +21,6 @@ public class PlayerSelector : MonoBehaviour
         { "Level5", "LoadLevel5" }
     };
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void Start()
     {
         LoadSelectedPlayerIndex();
@@ -48,6 +34,7 @@ public class PlayerSelector : MonoBehaviour
 
     private void SaveSelectedPlayerIndex()
     {
+
         PlayerPrefs.SetInt(SelectedPlayerIndexKey, currentIndex);
     }
 
@@ -90,7 +77,8 @@ public class PlayerSelector : MonoBehaviour
             GameObject spawnPoint = GameObject.FindWithTag("Spawnpoint");
             if (spawnPoint != null)
             {
-                int selectedPlayerIndex = PlayerPrefs.GetInt(SelectedPlayerIndexKey, 0);
+                //int selectedPlayerIndex = PlayerPrefs.GetInt(SelectedPlayerIndexKey, 0);
+                int selectedPlayerIndex = ShopManager.Instance.savedCharacterIndex;
                 if (selectedPlayerIndex >= 0 && selectedPlayerIndex < playerPrefabs.Count)
                 {
                     GameObject selectedPlayerPrefab = playerPrefabs[selectedPlayerIndex];
