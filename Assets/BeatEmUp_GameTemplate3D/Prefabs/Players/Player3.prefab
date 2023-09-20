@@ -122,8 +122,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058077902116294}
-  m_LocalRotation: {x: -0.0000000038265773, y: -0.0000000036211705, z: -0.027569205,
-    w: 0.9996199}
+  m_LocalRotation: {x: -0.0000000038265773, y: -0.0000000036211705, z: -0.027569205, w: 0.9996199}
   m_LocalPosition: {x: -0.036124248, y: -0.00000009689331, z: -0.000000012111664}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
@@ -1370,7 +1369,7 @@ MonoBehaviour:
   CurrentHp: 100
   invulnerable: 0
   HUDPortrait: {fileID: 21300000, guid: 21f4276bbdafd6f4e848543760025aea, type: 3}
-  PlayerName: Blopai
+  PlayerName: Piki
 --- !u!114 &114215166796135322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2227,8 +2226,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771718449339174}
-  m_LocalRotation: {x: -0.0000000065909798, y: 0.0000000035968717, z: 0.01958862,
-    w: 0.99980813}
+  m_LocalRotation: {x: -0.0000000065909798, y: 0.0000000035968717, z: 0.01958862, w: 0.99980813}
   m_LocalPosition: {x: -0.037881117, y: 0.00000009689331, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12768,8 +12766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDirection: -1
   DustEffectLand: {fileID: 115594, guid: 6c925d90c8ae6b148b428e7fe79c3f71, type: 3}
-  DustEffectJump: {fileID: 1350558754252556, guid: aa01e8fe85c4b55498cb17f0e85d5b2f,
-    type: 3}
+  DustEffectJump: {fileID: 1350558754252556, guid: aa01e8fe85c4b55498cb17f0e85d5b2f, type: 3}
   HitEffect: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
   DefendEffect: {fileID: 194486, guid: 103ca3ac1720c8445935db20b30e3305, type: 3}
   animator: {fileID: 0}
