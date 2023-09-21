@@ -71,6 +71,14 @@ public class CurrencyManager : MonoBehaviour
         OnDiamondCurrencyChanged?.Invoke(currentDiamondCurrency);
     }
 
+    public void RemoveDiamond(int amount)
+    {
+        currentDiamondCurrency -= amount;
+        SaveCurrencies(); // Save currencies after modification
+        UpdateCurrencyTexts();
+        OnDiamondCurrencyChanged?.Invoke(currentDiamondCurrency);
+    }
+
     public bool RemoveDiamondCurrency(int amount)
     {
         if (currentDiamondCurrency >= amount)
