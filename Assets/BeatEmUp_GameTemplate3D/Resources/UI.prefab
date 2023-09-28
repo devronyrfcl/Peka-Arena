@@ -1510,7 +1510,7 @@ GameObject:
   - component: {fileID: 224000011517051458}
   - component: {fileID: 222000014146060396}
   - component: {fileID: 792729396307482607}
-  - component: {fileID: 7233367829940179948}
+  - component: {fileID: 5046911825186218719}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -1566,7 +1566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinCurrencyText: {fileID: 8545713200492696612}
   diamondCurrencyText: {fileID: 1651658573074721741}
---- !u!114 &7233367829940179948
+--- !u!114 &5046911825186218719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013313466138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e4e4a4c93b51e4f95ed045bbbacf75, type: 3}
+  m_Script: {fileID: 11500000, guid: 02dbb303ec3b04c4bbb071233cb365eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   killCountText: {fileID: 1153058500319982268}
@@ -6767,6 +6767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224294291055225750}
   - component: {fileID: 222474832902380966}
+  - component: {fileID: 8939861546133210277}
   m_Layer: 0
   m_Name: TouchScreenControls
   m_TagString: Untagged
@@ -6807,6 +6808,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748371876922862}
   m_CullTransparentMesh: 1
+--- !u!114 &8939861546133210277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748371876922862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e4e4a4c93b51e4f95ed045bbbacf75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killCountText: {fileID: 0}
 --- !u!1 &1755703436771380
 GameObject:
   m_ObjectHideFlags: 0

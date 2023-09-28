@@ -1,19 +1,24 @@
 using UnityEngine;
-using TMPro; // Import the TextMeshPro namespace
+using TMPro;
 
 public class KillCountDisplay : MonoBehaviour
 {
-    public TextMeshProUGUI killCountText; // Reference to the TextMeshProUGUI component for displaying the kill count
+    public TextMeshProUGUI killCountText; // Reference to the TextMeshPro Text component.
 
-    void Start()
+    // Update is called once per frame.
+    private void Update()
     {
-        // Load the kill count from PlayerPrefs
-        int killCount = PlayerPrefs.GetInt("KillCount", 0);
-
-        // Update the TextMeshProUGUI with the kill count
-        if (killCountText != null)
+        // Check if the KillCountManager instance exists.
+        if (KillCountManager.Instance != null)
         {
-            killCountText.text = "Kills: " + killCount.ToString();
+            // Get the current season's kill count from the KillCountManager.
+            int currentSeasonKillCount = KillCountManager.Instance.GetCurrentSeasonKillCount();
+
+            // Update the TextMeshPro text to display the current season's kill count.
+            if (killCountText != null)
+            {
+                killCountText.text = currentSeasonKillCount.ToString();
+            }
         }
     }
 }

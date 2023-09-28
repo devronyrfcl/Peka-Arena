@@ -164,6 +164,8 @@ public class EnemyAI : EnemyActions, IDamagable<DamageObject>{
 		StartCoroutine (animator.FlickerCoroutine(2));
 		enemyState = UNITSTATE.DEATH;
 		CurrencyManager.Instance.AddCoinCurrency(CoinAddOnKill);
+		KillCountManager.Instance.EnemyKilled();
+
 
 		DestroyUnit();
 

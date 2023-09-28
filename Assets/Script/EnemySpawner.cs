@@ -17,6 +17,7 @@ public class EnemySpawner : MonoBehaviour
 
         // Start spawning enemies
         StartCoroutine(SpawnEnemies());
+        KillCountManager.Instance.ResetCurrentSeasonKillCount();
     }
 
     private IEnumerator SpawnEnemies()
