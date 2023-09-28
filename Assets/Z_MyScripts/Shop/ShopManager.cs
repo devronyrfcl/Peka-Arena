@@ -24,6 +24,10 @@ public class ShopManager : MonoBehaviour
     Text selectedButtonText;
 
     public int savedCharacterIndex;
+
+
+    
+
     
     void Awake()
     {
@@ -61,6 +65,8 @@ public class ShopManager : MonoBehaviour
    void Update()
    {
         savedCharacterIndex = PlayerPrefs.GetInt("SelectedCharacter");
+
+
    }
     public void ChangeNextCharacter()
     {
@@ -116,11 +122,14 @@ public class ShopManager : MonoBehaviour
     public void UnlockWithGems()
     {
         ShopElement c = characters[characterIndex];
-        if (PlayerPrefs.GetInt("InGameCurrency") < c.price)
+        if (PlayerPrefs.GetInt("Coin_Currency") < c.price)
+        {
             return;
+        }
+        /*int newGems = PlayerPrefs.GetInt("Coin_Currency") - characters[characterIndex].price;
+        PlayerPrefs.SetInt("Coin_Currency", newGems);*/
 
-        int newGems = PlayerPrefs.GetInt("InGameCurrency") - characters[characterIndex].price;
-        PlayerPrefs.SetInt("InGameCurrency", newGems);
+        CurrencyManager.Instance.RemoveCoinCurrency(c.price);
 
         c.isLocked = false;
         PlayerPrefs.SetInt(c.name, 0);
@@ -139,7 +148,7 @@ public class ShopManager : MonoBehaviour
             buyButton.gameObject.SetActive(true);
             buyButton.GetComponentInChildren<TextMeshProUGUI>().text = c.price + "";
 
-            if (PlayerPrefs.GetInt("InGameCurrency", 0) < c.price)
+            if (PlayerPrefs.GetInt("Coin_Currency", 0) < c.price)
                 buyButton.interactable = false;
             else
                 buyButton.interactable = true;

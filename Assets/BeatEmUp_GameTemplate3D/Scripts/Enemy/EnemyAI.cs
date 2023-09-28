@@ -7,7 +7,7 @@ public class EnemyAI : EnemyActions, IDamagable<DamageObject>{
 	[Space(10)]
 	public bool enableAI;
 	public int CoinAddOnKill = 2;
-	private CurrencyManager CurrencyManager;
+	
 
 	//a list of states where the AI is executed
 	private List<UNITSTATE> ActiveAIStates = new List<UNITSTATE> { 
@@ -163,9 +163,12 @@ public class EnemyAI : EnemyActions, IDamagable<DamageObject>{
 		GlobalAudioPlayer.PlaySFXAtPosition("EnemyDeath", transform.position);
 		StartCoroutine (animator.FlickerCoroutine(2));
 		enemyState = UNITSTATE.DEATH;
-		CurrencyManager.AddCoinCurrency(CoinAddOnKill);
+		CurrencyManager.Instance.AddCoinCurrency(CoinAddOnKill);
+
 		DestroyUnit();
+
 	}
+
 }
 
 public enum ENEMYTACTIC {
