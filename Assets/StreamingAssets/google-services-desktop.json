@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "111341694687",
+    "project_id": "peka-arena",
+    "storage_bucket": "peka-arena.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111341694687:android:a97ee88ede4dea981f836a",
+        "android_client_info": {
+          "package_name": "com.RifylcloneGames.PekaArena"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111341694687-mqh3guf8983g1nv2voebo53j7rkh741i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABnwMw--IIWRk7i9wEgvJr_z3PqkrRFls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111341694687-mqh3guf8983g1nv2voebo53j7rkh741i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
