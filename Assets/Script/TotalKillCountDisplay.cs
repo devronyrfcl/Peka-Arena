@@ -16,4 +16,9 @@ public class TotalKillCountDisplay : MonoBehaviour
             killCountText.text = "Kills: " + killCount.ToString();
         }
     }
+
+    //public void TrophyLeaderBoard()
+    //{
+    //    PlayFabManager.SendLeaderBoard(KillCount);
+    //}
 }

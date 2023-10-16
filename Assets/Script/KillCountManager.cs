@@ -68,6 +68,7 @@ public class KillCountManager : MonoBehaviour
     private void LoadKillCount()
     {
         totalKillCount = PlayerPrefs.GetInt("KillCount", 0);
+        //PlayFabManager.SendLeaderBoard(totalKillCount);
     }
 
     // Awake is called before Start and ensures there is only one instance of the script.
@@ -90,5 +91,6 @@ public class KillCountManager : MonoBehaviour
     {
         LoadKillCount();
         currentSeasonKillCount = 0; // Reset current season's kill count to 0 on start
+        
     }
 }
