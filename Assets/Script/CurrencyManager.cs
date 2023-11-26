@@ -1,5 +1,8 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class CurrencyManager : MonoBehaviour
 {
@@ -28,7 +31,7 @@ public class CurrencyManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); // Destroy duplicate instances
+            //Destroy(gameObject); // Destroy duplicate instances
         }
     }
 
@@ -131,4 +134,6 @@ public class CurrencyManager : MonoBehaviour
             SaveCurrencies(); // Save default currencies if it's the first time
         }
     }
+
+
 }

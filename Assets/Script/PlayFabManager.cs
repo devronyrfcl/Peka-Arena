@@ -14,6 +14,7 @@ public class PlayFabManager : MonoBehaviour
     [Header("Display Name Window")]
     public GameObject nameError;
     public InputField nameInput;
+    public InputField newNameInput;
 
     [Header("Leaderboard")]
     public GameObject rowPrefab;
@@ -139,6 +140,8 @@ public class PlayFabManager : MonoBehaviour
         playerName = result.DisplayName;
         //LoginWindow.SetActive(false);
         UserNameWindow.SetActive(false);
+
+        
     }
 
     void OnError(PlayFabError error)
@@ -211,4 +214,25 @@ public class PlayFabManager : MonoBehaviour
         }
         //messageText.text = result.Data["Message"];
     }
+
+    public void ChangeNameButtonOnClick()
+    {
+        string newDisplayName = newNameInput.text;
+
+        if (string.IsNullOrEmpty(newDisplayName))
+        {
+            // Handle error: Display name cannot be empty.
+            // You can show an error message or take appropriate action here.
+            return;
+        }
+
+        var request = new UpdateUserTitleDisplayNameRequest
+        {
+            DisplayName = newDisplayName,
+        };
+
+        PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
+    }
+
+    
 }
