@@ -804,6 +804,8 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Legacy Analytics: 1
+    Purchasing: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -818,11 +820,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: 425efef2-09cf-4375-bd29-f00c064b3e2e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Peka Arean
+  organizationId: rifylclonegames
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
