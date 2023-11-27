@@ -2316,8 +2316,8 @@ Terrain:
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 59
-  m_SplatMapDistance: 1000
+  m_HeightmapPixelError: 154
+  m_SplatMapDistance: 161
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1

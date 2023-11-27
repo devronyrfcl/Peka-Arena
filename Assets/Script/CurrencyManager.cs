@@ -12,6 +12,7 @@ public class CurrencyManager : MonoBehaviour
     [SerializeField] private int startingDiamondCurrency = 10;
     [SerializeField] private TextMeshProUGUI coinCurrencyText;
     [SerializeField] private TextMeshProUGUI diamondCurrencyText;
+    [SerializeField] private GameObject failedPopup; // Reference to the "Failed" popup GameObject
 
     private int currentCoinCurrency;
     private int currentDiamondCurrency;
@@ -39,6 +40,11 @@ public class CurrencyManager : MonoBehaviour
     {
         LoadCurrencies(); // Load saved currencies on start
         UpdateCurrencyTexts();
+
+        if (failedPopup != null)
+        {
+            failedPopup.SetActive(false); // Ensure the "Failed" popup is initially disabled
+        }
     }
 
     public void AddCoinCurrency(int amount)
@@ -73,6 +79,7 @@ public class CurrencyManager : MonoBehaviour
         UpdateCurrencyTexts();
         OnDiamondCurrencyChanged?.Invoke(currentDiamondCurrency);
     }
+    
 
     public void RemoveDiamond(int amount)
     {
@@ -82,7 +89,7 @@ public class CurrencyManager : MonoBehaviour
         OnDiamondCurrencyChanged?.Invoke(currentDiamondCurrency);
     }
 
-    public bool RemoveDiamondCurrency(int amount)
+    /*public void RemoveDiamondCurrency(int amount)
     {
         if (currentDiamondCurrency >= amount)
         {
@@ -90,13 +97,46 @@ public class CurrencyManager : MonoBehaviour
             SaveCurrencies(); // Save currencies after modification
             UpdateCurrencyTexts();
             OnDiamondCurrencyChanged?.Invoke(currentDiamondCurrency);
-            return true;
         }
         else
         {
+            // Player doesn't have enough diamonds, show "Failed" popup
+            if (failedPopup != null)
+            {
+                failedPopup.SetActive(true);
+            }
             Debug.LogWarning("Not enough Diamonds to remove.");
-            return false;
         }
+    }*/
+
+    public void RemoveDiamondCurrency(int amount)
+    {
+        // Check if the specified amount is equal to or less than the currentDiamondCurrency
+        if (amount <= currentDiamondCurrency)
+        {
+            currentDiamondCurrency -= amount;
+            SaveCurrencies(); // Save currencies after modification
+            UpdateCurrencyTexts();
+            OnDiamondCurrencyChanged?.Invoke(currentDiamondCurrency);
+        }
+        else
+        {
+            // Player doesn't have enough diamonds, show "Failed" popup
+            if (failedPopup != null)
+            {
+                failedPopup.SetActive(true);
+            }
+            Debug.LogWarning("Not enough Diamonds to remove.");
+        }
+    }
+
+    public void PurchaseDiamonds(int amount)
+    {
+        // Integrate your IAP logic here
+        // For example, you might use Unity IAP or another IAP solution
+
+        // Assume a successful purchase of the specified amount of diamonds
+        AddDiamondCurrency(amount);
     }
 
     private void UpdateCurrencyTexts()

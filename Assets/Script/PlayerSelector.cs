@@ -18,7 +18,8 @@ public class PlayerSelector : MonoBehaviour
         { "Level2", "LoadLevel2" },
         { "Level3", "LoadLevel3" },
         { "Level4", "LoadLevel4" },
-        { "Level5", "LoadLevel5" }
+        { "Level5", "LoadLevel5" },
+        { "Level6", "LoadLevel6" }
     };
 
     private void Start()
