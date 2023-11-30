@@ -80,7 +80,7 @@ public class PlayFabManager : MonoBehaviour
         playerName = result.InfoResultPayload.PlayerProfile.DisplayName;
 
         if (string.IsNullOrEmpty(playerName))
-            nameWindow.SetActive(true);
+            nameWindow.SetActive(false);
         else
             leaderboardWindow.SetActive(true);
     }
@@ -118,7 +118,7 @@ public class PlayFabManager : MonoBehaviour
         playerName = result.InfoResultPayload.PlayerProfile.DisplayName;
 
         if (string.IsNullOrEmpty(playerName))
-            nameWindow.SetActive(true);
+            nameWindow.SetActive(false);
         else
             //leaderboardWindow.SetActive(true);
             LoginWindow.SetActive(false);
