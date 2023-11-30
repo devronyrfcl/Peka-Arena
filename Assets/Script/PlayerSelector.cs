@@ -1,12 +1,16 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerSelector : MonoBehaviour
 {
-
     public List<GameObject> playerPrefabs;
     public List<GameObject> dummyObjects;
+    
+    public GameObject loadingScreen;
+    public Slider loadingSlider;
 
     private int currentIndex = 0;
 
@@ -35,7 +39,6 @@ public class PlayerSelector : MonoBehaviour
 
     private void SaveSelectedPlayerIndex()
     {
-
         PlayerPrefs.SetInt(SelectedPlayerIndexKey, currentIndex);
     }
 
@@ -61,13 +64,28 @@ public class PlayerSelector : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(LoadSceneWithLoadingScreen(sceneName));
+    }
+
+    IEnumerator LoadSceneWithLoadingScreen(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        loadingScreen.SetActive(true);
+
+        while (!asyncLoad.isDone)
+        {
+            float progress = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            loadingSlider.value = progress;
+
+            yield return null;
+        }
     }
 
     public void SpawnPlayerToScene(string sceneName)
     {
         SaveSelectedPlayerIndex();
-        LoadScene(sceneName);
+        StartCoroutine(LoadSceneWithLoadingScreen(sceneName));
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -78,14 +96,12 @@ public class PlayerSelector : MonoBehaviour
             GameObject spawnPoint = GameObject.FindWithTag("Spawnpoint");
             if (spawnPoint != null)
             {
-                //int selectedPlayerIndex = PlayerPrefs.GetInt(SelectedPlayerIndexKey, 0);
                 int selectedPlayerIndex = ShopManager.Instance.savedCharacterIndex;
                 if (selectedPlayerIndex >= 0 && selectedPlayerIndex < playerPrefabs.Count)
                 {
                     GameObject selectedPlayerPrefab = playerPrefabs[selectedPlayerIndex];
                     GameObject spawnedPlayer = Instantiate(selectedPlayerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
                     spawnedPlayer.SetActive(true);
-                    // You can add further logic or components to the spawned player as needed.
                 }
                 else
                 {
@@ -99,6 +115,7 @@ public class PlayerSelector : MonoBehaviour
 
             // Unsubscribe from the sceneLoaded event to prevent multiple subscriptions.
             SceneManager.sceneLoaded -= OnSceneLoaded;
+            loadingScreen.SetActive(false);
         }
     }
 }
