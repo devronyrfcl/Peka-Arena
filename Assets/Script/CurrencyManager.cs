@@ -139,8 +139,9 @@ public class CurrencyManager : MonoBehaviour
         AddDiamondCurrency(amount);
     }
 
-    private void UpdateCurrencyTexts()
+    public void UpdateCurrencyTexts()
     {
+        LoadCurrencies();
         coinCurrencyText.text = currentCoinCurrency.ToString();
         diamondCurrencyText.text = currentDiamondCurrency.ToString();
     }
