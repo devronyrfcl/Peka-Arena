@@ -104,10 +104,13 @@ public class ShopManager : MonoBehaviour
         ShopElement c = characters[characterIndex];
         if (PlayerPrefs.GetInt("Coin_Currency") < c.price)
         {
+            
             return;
         }
 
         // Implement CurrencyManager.Instance.RemoveCoinCurrency(c.price);
+
+        CurrencyManager.Instance.RemoveCoinCurrency(c.price);
 
         c.isLocked = false;
         PlayerPrefs.SetInt(c.name, 0);
