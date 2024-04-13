@@ -12,9 +12,10 @@ public class PlayerSelector : MonoBehaviour
     public GameObject loadingScreen;
     public Slider loadingSlider;
 
-    private int currentIndex = 0;
+    public int currentIndex = 0;
 
-    private const string SelectedPlayerIndexKey = "SelectedPlayerIndex";
+
+    public string SelectedPlayerIndexKey = "SelectedCharacter";
 
     private Dictionary<string, string> sceneButtons = new Dictionary<string, string>
     {
@@ -29,7 +30,12 @@ public class PlayerSelector : MonoBehaviour
     private void Start()
     {
         LoadSelectedPlayerIndex();
-        UpdateDummyObjects();
+        //UpdateDummyObjects();
+    }
+
+    private void Update()
+    {
+        //currentIndex = PlayerPrefs.GetInt(SelectedPlayerIndexKey, 0);
     }
 
     private void LoadSelectedPlayerIndex()
@@ -42,24 +48,24 @@ public class PlayerSelector : MonoBehaviour
         PlayerPrefs.SetInt(SelectedPlayerIndexKey, currentIndex);
     }
 
-    private void UpdateDummyObjects()
+    /*private void UpdateDummyObjects()
     {
         for (int i = 0; i < dummyObjects.Count; i++)
         {
             dummyObjects[i].SetActive(i == currentIndex);
         }
-    }
+    }*/
 
     public void NextPlayer()
     {
         currentIndex = (currentIndex + 1) % playerPrefabs.Count;
-        UpdateDummyObjects();
+        //UpdateDummyObjects();
     }
 
     public void PreviousPlayer()
     {
         currentIndex = (currentIndex - 1 + playerPrefabs.Count) % playerPrefabs.Count;
-        UpdateDummyObjects();
+       // UpdateDummyObjects();
     }
 
     public void LoadScene(string sceneName)
@@ -84,13 +90,14 @@ public class PlayerSelector : MonoBehaviour
 
     public void SpawnPlayerToScene(string sceneName)
     {
-        SaveSelectedPlayerIndex();
+        LoadSelectedPlayerIndex();//SaveSelectedPlayerIndex();
         StartCoroutine(LoadSceneWithLoadingScreen(sceneName));
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        
         if (sceneButtons.ContainsKey(scene.name))
         {
             GameObject spawnPoint = GameObject.FindWithTag("Spawnpoint");

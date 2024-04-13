@@ -27,7 +27,7 @@ public class ShopManager : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("InGameCurrency", 1000);
+        //PlayerPrefs.SetInt("InGameCurrency", 1000);
 
         selectedButtonText = selectCharacterButton.GetComponentInChildren<Text>();
 
@@ -94,6 +94,7 @@ public class ShopManager : MonoBehaviour
         if (isLocked)
             return;
 
+        //PlayerPrefs.SetInt("SelectedCharacter", characterIndex);
         PlayerPrefs.SetInt("SelectedCharacter", characterIndex);
         selectedButtonText.text = "Selected";
         selectCharacterButton.interactable = false;
@@ -118,7 +119,7 @@ public class ShopManager : MonoBehaviour
         UpdateUI();
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         ShopElement c = characters[characterIndex];
 
@@ -152,7 +153,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void UpdateCharacterDummy()
+    /*public void UpdateCharacterDummy()
     {
         bool isLocked = characters[characterIndex].isLocked;
         if (isLocked)
@@ -161,5 +162,14 @@ public class ShopManager : MonoBehaviour
             shopCharacters[savedCharacterIndex].SetActive(true);
             characterIndex = savedCharacterIndex;
         }
+    }*/
+    public void BackButton()
+    {
+        characterIndex = savedCharacterIndex;
+        foreach(GameObject character in shopCharacters)
+        {
+            character.SetActive(false);
+        }
+        shopCharacters[savedCharacterIndex].SetActive(true);
     }
 }
