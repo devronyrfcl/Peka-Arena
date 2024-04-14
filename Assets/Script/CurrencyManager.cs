@@ -32,7 +32,7 @@ public class CurrencyManager : MonoBehaviour
         }
         else
         {
-            //Destroy(gameObject); // Destroy duplicate instances
+            
         }
     }
 
@@ -45,6 +45,11 @@ public class CurrencyManager : MonoBehaviour
         {
             failedPopup.SetActive(false); // Ensure the "Failed" popup is initially disabled
         }
+    }
+
+    void Update()
+    {
+        UpdateCurrencyTexts();
     }
 
     public void AddCoinCurrency(int amount)

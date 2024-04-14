@@ -111,6 +111,7 @@ public class ShopManager : MonoBehaviour
 
         // Implement CurrencyManager.Instance.RemoveCoinCurrency(c.price);
 
+        c.isLocked = false;
         CurrencyManager.Instance.RemoveCoinCurrency(c.price);
 
         c.isLocked = false;
