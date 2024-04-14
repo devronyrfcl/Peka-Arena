@@ -12,7 +12,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
+<<<<<<< Updated upstream
       "version": "1.6.5",
+=======
+      "version": "1.8.11",
+>>>>>>> Stashed changes
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -46,8 +50,13 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
+<<<<<<< Updated upstream
         "com.unity.ide.visualstudio": "2.0.15",
         "com.unity.ide.rider": "3.0.14",
+=======
+        "com.unity.ide.visualstudio": "2.0.22",
+        "com.unity.ide.rider": "3.0.26",
+>>>>>>> Stashed changes
         "com.unity.ide.vscode": "1.2.5",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.performance.profile-analyzer": "1.1.1",
@@ -56,7 +65,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.25",
+      "version": "3.0.26",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -65,7 +74,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.21",
+      "version": "2.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {
