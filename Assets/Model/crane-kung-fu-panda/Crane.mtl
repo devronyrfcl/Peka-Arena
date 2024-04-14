@@ -1,0 +1,25 @@
+# Blender MTL File: 'Crane.blend'
+# Material Count: 2
+
+newmtl t0009_0
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd Crane Eye.png
+
+newmtl t0012_0
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd D:\Timothy's files\3dstuff\Kung Fu Panda rip\Crane\Crane.png
+map_Bump Crane Normal Map.png
+map_Ke Crane spectacular.png
+map_d D:\\Timothy's files\\3dstuff\\Kung Fu Panda rip\\Crane\\Crane.png

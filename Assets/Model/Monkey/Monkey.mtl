@@ -1,0 +1,25 @@
+# Blender MTL File: 'Monkey.blend'
+# Material Count: 2
+
+newmtl Moneky
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Timothy's files\3dstuff\Kung Fu Panda rip\Monkey\Monkey.png
+map_Ke Monkey Spectacular.png
+
+newmtl t0000_0.004
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Monkey Eye.png
+map_Ka Monkey Eye.png
+map_Ke Monkey Eye.png
