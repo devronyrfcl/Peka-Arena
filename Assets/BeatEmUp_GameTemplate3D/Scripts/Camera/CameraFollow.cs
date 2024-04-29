@@ -30,11 +30,12 @@ public class CameraFollow : MonoBehaviour {
 	private bool firstFrameActive;
 
 	void Start(){
-		UpdatePlayerTargets();
+		
 		firstFrameActive = true;
 	}
 
 	void Update () {
+		UpdatePlayerTargets();
 		if (targets.Length > 0){
 			MiddlePosition = Vector3.zero;
 
