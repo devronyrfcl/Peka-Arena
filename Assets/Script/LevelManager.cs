@@ -4,7 +4,6 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
-    public int LevelIndex;
     public GameObject loadingScreen;
     public UnityEngine.UI.Slider loadingSlider;
 
@@ -20,11 +19,11 @@ public class LevelManager : MonoBehaviour
         Debug.Log("LevelManager: Update()");
     }
 
-    public void SelectLevel()
+    public void SelectLevel(int levelIndex)
     {
-        PlayerPrefs.SetInt("LevelIndex", LevelIndex);
+        PlayerPrefs.SetInt("LevelIndex", levelIndex);
         PlayerPrefs.Save();
-        Debug.Log("LevelManager: LevelIndex saved: " + LevelIndex);
+        Debug.Log("LevelManager: LevelIndex saved: " + levelIndex);
 
         // Start the coroutine to load the scene with loading screen
         StartCoroutine(LoadSceneWithLoadingScreen("Platformer"));
