@@ -96,8 +96,8 @@ public class InputManager : MonoBehaviour {
 		}
 
 		//get Joypad  direction axis
-		float x = Input.GetAxis("Joypad Left-Right");
-		float y = Input.GetAxis("Joypad Up-Down");
+		float x = Input.GetAxis("Joypad Left-Right");		//Joypad Left-Right
+		float y = Input.GetAxis("Joypad Up-Down");			//Joypad Up-Down
 
 		//send a direction event
 		DirectionEvent(new Vector2(x,y).normalized, false);

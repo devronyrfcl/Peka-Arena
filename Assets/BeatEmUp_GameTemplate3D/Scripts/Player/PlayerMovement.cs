@@ -263,7 +263,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 	//look (and turns) towards a direction
 	public void TurnToCurrentDirection() {
-		if(currentDirection == DIRECTION.Right || currentDirection == DIRECTION.Left) {
+		if(currentDirection == DIRECTION.Right || currentDirection == DIRECTION.Left) {  //right left
 			float turnSpeed = jumpInProgress? jumpRotationSpeed : rotationSpeed;
 			Vector3 newDir = Vector3.RotateTowards(transform.forward, Vector3.forward * -(int)currentDirection, turnSpeed * Time.fixedDeltaTime, 0.0f);
 			transform.rotation = Quaternion.LookRotation(newDir);

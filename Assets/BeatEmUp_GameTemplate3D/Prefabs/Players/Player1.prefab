@@ -1285,6 +1285,7 @@ GameObject:
   - component: {fileID: 114973803696962722}
   - component: {fileID: 114215166796135322}
   - component: {fileID: 114894661200743772}
+  - component: {fileID: 3261352903320661588}
   m_Layer: 9
   m_Name: Player1
   m_TagString: Player
@@ -1624,6 +1625,38 @@ MonoBehaviour:
   currentDirection: -1
   itemInRange: {fileID: 0}
   targetHit: 0
+--- !u!114 &3261352903320661588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443228785723502}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752ffd7107410a540acd09b8de2a1f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 3
+  runSpeed: 6
+  ZSpeed: 2
+  JumpForce: 8
+  AllowDepthJumping: 0
+  AirAcceleration: 3
+  AirMaxSpeed: 3
+  rotationSpeed: 15
+  jumpRotationSpeed: 30
+  lookAheadDistance: 0.2
+  landRecoveryTime: 0.1
+  landTime: 0
+  CollisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpUpVoice: 
+  jumpLandVoice: 
+  currentDirection: 0
+  inputDirection: {x: 0, y: 0}
+  jumpInProgress: 0
 --- !u!1 &1448580236982872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,7 +2558,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &95899383307112096
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2542,8 +2575,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6774399255459583365
 PrefabInstance:
   m_ObjectHideFlags: 0
