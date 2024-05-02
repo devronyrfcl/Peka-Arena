@@ -27,7 +27,7 @@ Material:
   - _EMISSION
   m_InvalidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
-  m_LightmapFlags: 2
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
@@ -114,7 +114,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _Metallic: 0.471
+    - _Metallic: 0.828
     - _Mode: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.02

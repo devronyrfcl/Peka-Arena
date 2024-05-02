@@ -32,7 +32,7 @@ public class TileGlitch : MonoBehaviour
     private void DoGlitch()
     {
         // Disable two random tiles
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 1; i++)
         {
             int randomIndex = Random.Range(0, tiles.Length);
             tiles[randomIndex].SetActive(false);
