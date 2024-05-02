@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - UI
   - Tree
+  - Spawnpoint
+  - VirtualJoystick
   layers:
   - Default
   - TransparentFX
