@@ -9,6 +9,8 @@ TagManager:
   - Tree
   - Spawnpoint
   - VirtualJoystick
+  - CinemachineTarget
+  - GameOverUI
   layers:
   - Default
   - TransparentFX
