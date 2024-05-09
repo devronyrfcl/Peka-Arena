@@ -35,7 +35,7 @@ public class StarCounter : MonoBehaviour
     {
         if (starCountText != null)
         {
-            starCountText.text = "Stars Collected: " + starCount;
+            starCountText.text = starCount.ToString();
         }
         else
         {
@@ -48,7 +48,7 @@ public class StarCounter : MonoBehaviour
         // Set the initial star count text when the game starts
         if (starCountText != null)
         {
-            starCountText.text = "Stars Collected: " + starCount;
+            starCountText.text = starCount.ToString();
         }
         else
         {

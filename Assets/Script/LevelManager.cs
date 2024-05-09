@@ -10,13 +10,14 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         // Initialization code goes here
-        Debug.Log("LevelManager: Start()");
+        //Debug.Log("LevelManager: Start()");
+        
     }
 
     void Update()
     {
         // Update code goes here
-        Debug.Log("LevelManager: Update()");
+       // Debug.Log("LevelManager: Update()");
     }
 
     public void SelectLevel(int levelIndex)

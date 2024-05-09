@@ -645,8 +645,8 @@ MonoBehaviour:
   - {fileID: 540168923177202628}
   - {fileID: 540168923586650537}
   levelIndexText: {fileID: 540168924070085544}
-  lockColor: {r: 1, g: 1, b: 1, a: 1}
-  unlockColor: {r: 1, g: 1, b: 1, a: 1}
+  lockColor: {r: 0, g: 0, b: 0, a: 0.39215687}
+  unlockColor: {r: 0.9411764, g: 1, b: 0, a: 1}
   btn: {fileID: 540168924446768849}
   activeLevelIndicator: {fileID: 3688106237626654101}
 --- !u!1 &3688106237626654101
