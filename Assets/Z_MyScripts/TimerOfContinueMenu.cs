@@ -12,6 +12,8 @@ public class TimerOfContinueMenu : MonoBehaviour
     public GameObject continueMenu;
     public GameObject gameOverPanel;
 
+    [SerializeField] StarCounter starCounter;
+
     //public MyInterstitial myInterstitial;
 
     public bool timerActive;
@@ -49,11 +51,12 @@ public class TimerOfContinueMenu : MonoBehaviour
             currentTimeText.text = currentTime.ToString("0");
             if(timeSlider.value == 1)
             {
+                Debug.Log("game over");
                 gameOverPanel.SetActive(true);
                 
                 
                 // Actual game over           // Adding the coins actually when our gameover pane is activated
-                
+                TriggerActivation.Instance.GameOver(starCounter.GetStarCount());
 
                 //Showing the interstitial ad
                 //InterstitialAdInGame.Instance.ShowAd();

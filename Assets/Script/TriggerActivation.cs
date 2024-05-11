@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class TriggerActivation : MonoBehaviour
 {
+    public static TriggerActivation Instance;
     // The GameObject to activate when the player enters the collider
     public GameObject objectToActivate;
     //public GameUI gameUI;
@@ -14,7 +15,13 @@ public class TriggerActivation : MonoBehaviour
 
     [SerializeField] StarCounter starCounter;
 
-
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
     // Check if the player has entered the collider
     private void OnTriggerEnter(Collider other)
     {

@@ -6234,7 +6234,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1930217974}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 3
   m_WholeNumbers: 0
   m_Value: 3
@@ -10547,7 +10547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278407651}
   m_Layer: 0
-  m_Name: All Tiles 1 (1)
+  m_Name: Level 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50388,7 +50388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551352143}
   m_Layer: 0
-  m_Name: All Tiles 1 (2)
+  m_Name: Level 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59237,6 +59237,7 @@ MonoBehaviour:
   timeSlider: {fileID: 146293212}
   continueMenu: {fileID: 8246484269979707767}
   gameOverPanel: {fileID: 1837024548}
+  starCounter: {fileID: 0}
   timerActive: 0
   startSeconds: 3
   currentTimeText: {fileID: 1012034485}
@@ -95714,7 +95715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988165322594662515}
   m_Layer: 0
-  m_Name: All Tiles 1
+  m_Name: Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104755,6 +104756,7 @@ MonoBehaviour:
   timeSlider: {fileID: 146293212}
   continueMenu: {fileID: 8246484269979707767}
   gameOverPanel: {fileID: 1837024548}
+  starCounter: {fileID: 1850691744}
   timerActive: 0
   startSeconds: 3
   currentTimeText: {fileID: 1012034485}
@@ -105932,7 +105934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -6.045471}
+  m_AnchoredPosition: {x: 0, y: -6.0455017}
   m_SizeDelta: {x: 0, y: 12.091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8539550755984281653
@@ -110465,7 +110467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -6.045471}
+  m_AnchoredPosition: {x: 0, y: -6.0455017}
   m_SizeDelta: {x: 0, y: 12.091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8539550757251390233
