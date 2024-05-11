@@ -22,9 +22,9 @@ public class TriggerActivation : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Activate the specified GameObject
-            //objectToActivate.SetActive(true);
-            GameOver(starCounter.GetStarCount());
-            overPanel.SetActive(true); 
+            objectToActivate.SetActive(true);
+            //GameOver(starCounter.GetStarCount());
+            //overPanel.SetActive(true); 
         }
     }
 
