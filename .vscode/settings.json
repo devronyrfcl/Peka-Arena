@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Peka-Arena.sln"
+    "dotnet.defaultSolution": "Peka-Arena.sln",
+    "dotnet.preferCSharpExtension": true
 }
