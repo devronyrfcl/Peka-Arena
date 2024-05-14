@@ -53,10 +53,11 @@ public class TimerOfContinueMenu : MonoBehaviour
             {
                 Debug.Log("game over");
                 gameOverPanel.SetActive(true);
+                Time.timeScale = 0;
                 
                 
                 // Actual game over           // Adding the coins actually when our gameover pane is activated
-                TriggerActivation.Instance.GameOver(starCounter.GetStarCount());
+                //TriggerActivation.Instance.GameOver(starCounter.GetStarCount());
 
                 //Showing the interstitial ad
                 //InterstitialAdInGame.Instance.ShowAd();

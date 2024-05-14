@@ -31,7 +31,7 @@ public class CurrencyDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        CurrencyManager.Instance.OnCoinCurrencyChanged -= UpdateCoinCurrencyText;
-        CurrencyManager.Instance.OnDiamondCurrencyChanged -= UpdateDiamondCurrencyText;
+        //CurrencyManager.Instance.OnCoinCurrencyChanged -= UpdateCoinCurrencyText;
+       // CurrencyManager.Instance.OnDiamondCurrencyChanged -= UpdateDiamondCurrencyText;
     }
 }

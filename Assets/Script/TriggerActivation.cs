@@ -10,7 +10,7 @@ public class TriggerActivation : MonoBehaviour
     //public GameUI gameUI;
     [SerializeField] GameObject overPanel;
     [SerializeField] private Image[] starsArray;            //array of stars
-    [SerializeField] private Text levelStatusText;          //level status text
+    //[SerializeField] private Text levelStatusText;          //level status text
     [SerializeField] private Color lockColor, unlockColor;
 
     [SerializeField] StarCounter starCounter;

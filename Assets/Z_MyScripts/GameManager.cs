@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         checkPointNum = 0;
         player = GameObject.FindWithTag("Player");
     }
@@ -36,5 +38,10 @@ public class GameManager : MonoBehaviour
         //Debug.Log("GameOver");
         gameOverScreen.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

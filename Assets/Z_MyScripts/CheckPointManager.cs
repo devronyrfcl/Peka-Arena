@@ -33,6 +33,7 @@ public class CheckPointManager : MonoBehaviour
            // Debug.Log(checkPoints[GameManager.Instance.checkPointNum - 1].transform.position);
 
             StartCoroutine(PlayerPositionChange());
+            Time.timeScale = 1;
 
         }
     }
