@@ -11,6 +11,7 @@ TagManager:
   - VirtualJoystick
   - CinemachineTarget
   - GameOverUI
+  - Obstacle
   layers:
   - Default
   - TransparentFX
