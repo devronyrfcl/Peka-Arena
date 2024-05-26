@@ -6,6 +6,7 @@ public class TileGlitch : MonoBehaviour
     public GameObject[] tiles; // Array of tiles to glitch
     public float glitchInterval = 0.5f; // Time interval between glitches
     private bool isGlitching = false;
+    public int MaxGlitch = 1;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class TileGlitch : MonoBehaviour
     private void DoGlitch()
     {
         // Disable two random tiles
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < MaxGlitch; i++)
         {
             int randomIndex = Random.Range(0, tiles.Length);
             tiles[randomIndex].SetActive(false);
