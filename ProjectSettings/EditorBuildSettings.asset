@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 3948a36d188ee614ea5632ace1fc9311
   - enabled: 1
     path: Assets/Scenes/Platformer.unity
-    guid: e9a44c3259381a94897b0f7dc2dd591e
+    guid: 8b37124344c1fa04c979e0bcf857a60b
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 439948eb30b8e9447886ba8cad478a92

@@ -8,13 +8,17 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 2f;    // Time interval between spawns
     public int maxEnemies = 10;         // Maximum number of enemies to spawn
 
-    private Transform playerTransform;
+    public Transform playerTransform;
+
+    private void Awake()
+    {
+        // Find the player's transform by searching for the object with the "Player" tag
+        
+    }
 
     private void Start()
     {
-        // Find the player's transform by searching for the object with the "Player" tag
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
         // Start spawning enemies
         StartCoroutine(SpawnEnemies());
         KillCountManager.Instance.ResetCurrentSeasonKillCount();
