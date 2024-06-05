@@ -44,4 +44,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void RestartGame()
+    {
+        // Get the current active scene and reload it
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
 }

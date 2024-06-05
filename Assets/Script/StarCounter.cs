@@ -11,6 +11,7 @@ public class StarCounter : MonoBehaviour
     {
         starCount++; // Increase the star count by 1
         UpdateStarCountText(); // Update the star count text
+        CurrencyManager.Instance.AddCoinCurrency(5);
         Debug.Log("Stars Collected: " + starCount);
         // You can add any other actions here, like saving progress, etc.
     }

@@ -826,9 +826,10 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Build: 0
+    Collab: 0
     Game Performance: 0
     Legacy Analytics: 1
-    Purchasing: 0
+    Purchasing: 1
     UDP: 0
     UNet: 1
     Unity Ads: 1
@@ -845,10 +846,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
-  cloudProjectId: 664e209b-6fa0-4ddf-93d5-365fee2b6881
+  cloudProjectId: aa1c63d3-6d31-4a07-abc4-d48d64bf4048
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: "Kung Fu The Warrior\_Panda"
+  projectName: Peka Arena Android
   organizationId: rifylclonegames
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
