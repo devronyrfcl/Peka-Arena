@@ -93,4 +93,9 @@ public class KillCountManager : MonoBehaviour
         currentSeasonKillCount = 0; // Reset current season's kill count to 0 on start
         
     }
+
+    public void StarCollected()
+    {
+        EnemyKilled();
+    }
 }
