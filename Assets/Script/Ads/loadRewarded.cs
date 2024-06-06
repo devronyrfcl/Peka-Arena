@@ -11,7 +11,8 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
 
     string adUnitId;
 
-    [SerializeField] UnityEvent onAdComplete; // Declare the UnityEvent
+    // Reference to the GameManager GameObject
+    public GameObject GameManager;
 
     void Awake()
     {
@@ -20,7 +21,11 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
 #elif UNITY_ANDROID
         adUnitId = androidAdUnitId;
 #endif
+    }
 
+    void Start()
+    {
+        LoadAd();
     }
 
     public void LoadAd()
@@ -34,7 +39,7 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
         if (placementId.Equals(adUnitId))
         {
             print("Rewarded loaded!!");
-            ShowAd();
+            //ShowAd();
         }
     }
 
@@ -43,12 +48,11 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
         print("Rewarded failed to load");
     }
 
-
-
     public void ShowAd()
     {
         print("showing Rewarded ad!!");
         Advertisement.Show(adUnitId, this);
+        LoadAd();
     }
 
     public void OnUnityAdsShowClick(string placementId)
@@ -58,24 +62,38 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
 
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
-        if (placementId.Equals(adUnitId)&&showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
+        if (placementId.Equals(adUnitId) && showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
         {
-            onAdComplete.Invoke();
             // Grant a reward or perform other actions.
             print("Rewarded show complete , Distribute the rewards");
 
+            // Call the RespawnPlayer function from the RespawnFunction script attached to the GameManager GameObject
+            if (GameManager != null)
+            {
+                RespawnFunction respawnFunction = GameManager.GetComponent<RespawnFunction>();
+                if (respawnFunction != null)
+                {
+                    respawnFunction.RespawnPlayer();
+                }
+                else
+                {
+                    print("RespawnFunction script not found on GameManager.");
+                }
+            }
+            else
+            {
+                print("GameManager GameObject not assigned.");
+            }
         }
     }
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
     {
         print("Rewarded show failure");
-
     }
 
     public void OnUnityAdsShowStart(string placementId)
     {
         print("Rewarded show start");
-
     }
 }

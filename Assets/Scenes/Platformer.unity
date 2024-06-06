@@ -89251,33 +89251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   androidAdUnitId: Rewarded_Android
   iosAdUnitId: Rewarded_iOS
-  onAdComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1850691746}
-        m_TargetAssemblyTypeName: RespawnFunction, Assembly-CSharp
-        m_MethodName: RespawnPlayer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8246484269979707767}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  GameManager: {fileID: 1850691741}
 --- !u!114 &1756742304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529911,6 +529885,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: loadRewarded, Assembly-CSharp
         m_MethodName: ShowAd
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8246484269979707767}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
