@@ -47,7 +47,7 @@ public class BreakableObject : MonoBehaviour, IDamagable<DamageObject> {
 				item.transform.position = transform.position;
 
 				//add up force to object
-				item.GetComponent<Rigidbody>().velocity = Vector3.up * 8f;
+				item.GetComponent<Rigidbody>().linearVelocity = Vector3.up * 8f;
 			}
 		}
 

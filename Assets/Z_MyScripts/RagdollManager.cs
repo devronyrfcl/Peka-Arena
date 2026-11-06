@@ -73,7 +73,7 @@ public class RagdollManager : MonoBehaviour
         foreach (Collider collider in RagdollParts)
         {
             collider.enabled = true;
-            collider.attachedRigidbody.velocity = Vector3.zero;
+            collider.attachedRigidbody.linearVelocity = Vector3.zero;
         }
 
         StartCoroutine(DiableCharacterController());
